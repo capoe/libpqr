@@ -1,0 +1,30 @@
+[
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes_sar/3vh9_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes_sar/3vh9_bio1_HQY:A:303.sdf",
+  "code": "3vh9",
+  "vector": 6
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes_sar/5mxw_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes_sar/5mxw_bio1_ML1:A:218.sdf",
+  "code": "5mxw",
+  "vector": 1
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes_sar/6pyf_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes_sar/6pyf_bio1_EST:A:302.sdf",
+  "code": "6pyf",
+  "vector": 17
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes_sar/1ydb_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes_sar/1ydb_bio1_AZM:A:264.sdf",
+  "code": "1ydb",
+  "vector": 3
+ }
+]

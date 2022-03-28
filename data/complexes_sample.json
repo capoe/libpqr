@@ -1,0 +1,422 @@
+[
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/1djn_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/1djn_bio1_FMN:B:1802.sdf",
+  "code": "1djn"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/1e82_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/1e82_bio1_M90:E:400.sdf",
+  "code": "1e82"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/1gt3_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/1gt3_bio1_3OM:B:1158.sdf",
+  "code": "1gt3"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/1m5w_bio4_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/1m5w_bio4_DXP:G:1007.sdf",
+  "code": "1m5w"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/1nqv_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/1nqv_bio1_LMZ:A:1201.sdf",
+  "code": "1nqv"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/1oi6_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/1oi6_bio1_TMP:B:1203.sdf",
+  "code": "1oi6"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/1qmg_bio2_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/1qmg_bio2_APX:D:600.sdf",
+  "code": "1qmg"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/1tw2_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/1tw2_bio1_SAH:A:635.sdf",
+  "code": "1tw2"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/1u7w_bio2_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/1u7w_bio2_CTP:C:2500.sdf",
+  "code": "1u7w"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/1vay_bio2_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/1vay_bio2_AZA:E:1308.sdf",
+  "code": "1vay"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/1ye4_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/1ye4_bio1_NAD:A:800.sdf",
+  "code": "1ye4"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/1zp3_bio2_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/1zp3_bio2_FAD:A:395.sdf",
+  "code": "1zp3"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2ag2_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2ag2_bio1_LP3:A:2345.sdf",
+  "code": "2ag2"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2ai1_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2ai1_bio1_P1G:A:293.sdf",
+  "code": "2ai1"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2arc_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2arc_bio1_ARA:B:171.sdf",
+  "code": "2arc"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2bo4_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2bo4_bio1_FLC:E:1382.sdf",
+  "code": "2bo4"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2clf_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2clf_bio1_F6F:B:1396.sdf",
+  "code": "2clf"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2cw6_bio5_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2cw6_bio5_3HG:A:399.sdf",
+  "code": "2cw6"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2izl_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2izl_bio1_IMI:B:300.sdf",
+  "code": "2izl"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2nuu_bio3_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2nuu_bio3_ADP:L:1600.sdf",
+  "code": "2nuu"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2ofb_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2ofb_bio1_BNI:A:502.sdf",
+  "code": "2ofb"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2p4q_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2p4q_bio1_FLC:A:502.sdf",
+  "code": "2p4q"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2pt9_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2pt9_bio1_S4M:A:501.sdf",
+  "code": "2pt9"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2r3j_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2r3j_bio1_SCJ:A:501.sdf",
+  "code": "2r3j"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2v7m_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2v7m_bio1_DTE:A:1360.sdf",
+  "code": "2v7m"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2vtz_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2vtz_bio1_COA:A:1393.sdf",
+  "code": "2vtz"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2vvg_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2vvg_bio1_ADP:A:1351.sdf",
+  "code": "2vvg"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2vwh_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2vwh_bio1_NAP:A:500.sdf",
+  "code": "2vwh"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2xta_bio2_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2xta_bio2_TPP:C:2001.sdf",
+  "code": "2xta"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/2yn4_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/2yn4_bio1_39J:A:1237.sdf",
+  "code": "2yn4"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3f8r_bio2_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3f8r_bio2_NAP:C:4003.sdf",
+  "code": "3f8r"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3fl8_bio3_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3fl8_bio3_RAR:C:200.sdf",
+  "code": "3fl8"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3fne_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3fne_bio1_NAD:C:320.sdf",
+  "code": "3fne"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3gr6_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3gr6_bio1_TCL:J:258.sdf",
+  "code": "3gr6"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3heg_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3heg_bio1_BAX:A:1.sdf",
+  "code": "3heg"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3hyk_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3hyk_bio1_A3P:B:126.sdf",
+  "code": "3hyk"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3ick_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3ick_bio1_M0N:A:363.sdf",
+  "code": "3ick"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3jzk_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3jzk_bio1_YIN:A:1.sdf",
+  "code": "3jzk"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3kji_bio2_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3kji_bio2_ADP:B:256.sdf",
+  "code": "3kji"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3ld5_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3ld5_bio1_LDT:A:600.sdf",
+  "code": "3ld5"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3lsf_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3lsf_bio1_GLU:B:400.sdf",
+  "code": "3lsf"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3mo5_bio3_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3mo5_bio3_E72:C:1236.sdf",
+  "code": "3mo5"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3o1x_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3o1x_bio1_ADN:A:1450.sdf",
+  "code": "3o1x"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3oob_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3oob_bio1_KDH:A:402.sdf",
+  "code": "3oob"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3p9k_bio2_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3p9k_bio2_CIY:C:603.sdf",
+  "code": "3p9k"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3pcj_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3pcj_bio1_INO:O:550.sdf",
+  "code": "3pcj"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3pfd_bio5_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3pfd_bio5_FDA:D:390.sdf",
+  "code": "3pfd"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3riy_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3riy_bio1_NAD:A:2001.sdf",
+  "code": "3riy"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3t3g_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3t3g_bio1_GPU:A:843.sdf",
+  "code": "3t3g"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3v5w_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3v5w_bio1_8PR:A:701.sdf",
+  "code": "3v5w"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3vbp_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3vbp_bio1_TYD:E:301.sdf",
+  "code": "3vbp"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3w7f_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3w7f_bio1_FPS:A:301.sdf",
+  "code": "3w7f"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3wlv_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3wlv_bio1_AZA:B:401.sdf",
+  "code": "3wlv"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3zds_bio2_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3zds_bio2_OMD:K:2001.sdf",
+  "code": "3zds"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/3zds_bio5_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/3zds_bio5_OMD:I:2001.sdf",
+  "code": "3zds"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4b1x_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4b1x_bio1_LAB:B:1376.sdf",
+  "code": "4b1x"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4bj8_bio3_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4bj8_bio3_BTN:I:1123.sdf",
+  "code": "4bj8"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4bnm_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4bnm_bio1_TCU:C:1258.sdf",
+  "code": "4bnm"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4chz_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4chz_bio1_H75:A:1220.sdf",
+  "code": "4chz"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4d03_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4d03_bio1_FAD:A:700.sdf",
+  "code": "4d03"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4dw5_bio2_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4dw5_bio2_U:B:1116.sdf",
+  "code": "4dw5"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4ean_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4ean_bio1_IND:A:504.sdf",
+  "code": "4ean"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4eql_bio3_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4eql_bio3_AMP:B:601.sdf",
+  "code": "4eql"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4knm_bio2_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4knm_bio2_E1E:B:302.sdf",
+  "code": "4knm"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4lcf_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4lcf_bio1_1WL:A:303.sdf",
+  "code": "4lcf"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4lxk_bio3_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4lxk_bio3_1YT:C:501.sdf",
+  "code": "4lxk"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4qyf_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4qyf_bio1_3DV:A:301.sdf",
+  "code": "4qyf"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4rvk_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4rvk_bio1_3XK:A:301.sdf",
+  "code": "4rvk"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4xo7_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4xo7_bio1_ASD:A:402.sdf",
+  "code": "4xo7"
+ },
+ {
+  "src": "pdb",
+  "env_pdb": "../data/complexes/sample/4ykj_bio1_rec.pdb",
+  "mol_sdf": "../data/complexes/sample/4ykj_bio1_ALA:A:301.sdf",
+  "code": "4ykj"
+ }
+]
