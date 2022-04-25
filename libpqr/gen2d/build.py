@@ -12,18 +12,18 @@ from torch_geometric.loader.dataloader import Collater
 
 from ..aux import Timer
 from ..data import DatasetPartition
-from .arch import VlbFeaturizer, VlbComponents
+from .arch import G2dFeaturizer, G2dComponents
 from .aux import mol_to_tensors, data_to_torch
 
 
 def build_featurizer():
-    return VlbFeaturizer()
+    return G2dFeaturizer()
 
 
 def build_model(device):
     print("Build model ...") 
     feat = build_featurizer()
-    module = VlbComponents(
+    module = G2dComponents(
        feat=feat
     ).to(device)
     module.reset_parameters()
@@ -31,7 +31,7 @@ def build_model(device):
 
 
 def build_sampler(*args, **kwargs):
-    return VlbPreprocessor(*args, **kwargs)
+    return G2dPreprocessor(*args, **kwargs)
 
 
 def build_opt(model, lr=10**-3, weight_decay=0.):
@@ -45,7 +45,7 @@ def build_opt(model, lr=10**-3, weight_decay=0.):
     return optimizer
 
 
-class VlbPreprocessor:
+class G2dPreprocessor:
     def __init__(self, 
             smiles,
             settings

@@ -15,8 +15,7 @@ from libpqr.aux import (
 )
 
 from libpqr.gen2d import (
-    load_baseline,
-    sample_baseline
+    load_model_pq
 )
 
 from libpqr.gen3d import (
@@ -78,8 +77,8 @@ def train(args):
     )
 
     # Baseline
-    baseline = load_baseline(
-        model_arch=args.baseline, 
+    baseline = load_model_pq(
+        g2d_arch=args.baseline, 
         motifs_json=args.vocabulary,
         device=args.device
     )
@@ -196,8 +195,7 @@ def sample_baseline_batch(
         data_complex,
         type
 ):
-    motifs, probs = sample_baseline(
-        baseline=baseline, 
+    motifs, probs = baseline.sample(
         x=data_complex.lig_x,
         edge_index=data_complex.lig_edge_index,
         edge_attr=data_complex.lig_edge_attr,

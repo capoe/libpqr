@@ -16,7 +16,7 @@ from torch_geometric.data.collate import collate
 from torch_geometric.data.separate import separate
 from torch_geometric.loader.dataloader import Collater
 
-from .arch import LexData, LexFeaturizer
+from .arch import G3dData, G3dFeaturizer
 from ..aux import Timer, normalize_atom_index
 from .. import _cxx
 from ..gen1d import (
@@ -31,7 +31,7 @@ def motif_to_tensors(
         motif_input,
         settings=None
 ):
-    data = LexData(
+    data = G3dData(
         motif=motif_input["mol"], 
         motif_vectors=[motif_input["vec"]],
         motif_ids=[motif_input["id"]],
@@ -89,8 +89,8 @@ def complex_to_tensors(
 
 def featurize_components(data, data_env=None, reindex_mask=None):
     if data_env is None:
-        data_env = LexData()
-    feat = LexFeaturizer()
+        data_env = G3dData()
+    feat = G3dFeaturizer()
     if hasattr(data, "mol"):
         data_env.mol = data.mol
         data_env = feat(
@@ -98,7 +98,7 @@ def featurize_components(data, data_env=None, reindex_mask=None):
             selection_mask=reindex_mask
         )
     if hasattr(data, "motif"):
-        data_motif = LexData(mol=data.motif)
+        data_motif = G3dData(mol=data.motif)
         data_motif = feat(data_motif)
         data_env.motif = data.motif
         data_env.motif_index = torch.from_numpy(data.motif_index).long()
@@ -108,7 +108,7 @@ def featurize_components(data, data_env=None, reindex_mask=None):
         data_env.motif_vectors = torch.tensor(data.motif_vectors).long()
         data_env.motif_ids = data.motif_ids
     if hasattr(data, "lig"):
-        data_out_lig = LexData(mol=data.lig)
+        data_out_lig = G3dData(mol=data.lig)
         data_out_lig = feat(data_out_lig)
         data_env.lig = torch.zeros((data_out_lig.x.shape[0],)).long()
         data_env.lig_x = data_out_lig.x
@@ -237,7 +237,7 @@ def generate_recon_sequence(lig, prot, complex_data, settings, verbose=False):
     # >>> config.info["path"] = path
     # >>> bml.write('tmp_flags.xyz', [ config ])
 
-    return LexData(
+    return G3dData(
         mol=mol_glob,
         flags=flags_glob,
         centers=centers_glob,
@@ -379,7 +379,7 @@ def generate_environments(
     if env_center_index is None:
         return None, reindex_mask
 
-    data_out = LexData()
+    data_out = G3dData()
     data_out.flags = torch.from_numpy(flags)
     data_out.center_index = centers.long()
     data_out.env_center_index = torch.from_numpy(env_center_index).long()

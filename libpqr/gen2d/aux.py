@@ -6,7 +6,7 @@ import rdkit.Chem as chem
 
 from torch_geometric.loader.dataloader import Collater
 
-from .arch import VlbData, VlbFeaturizer
+from .arch import G2dData, G2dFeaturizer
 from ..gen1d import fragment_mol, rebuild_mol
 from ..aux import normalize_atom_index
 
@@ -16,8 +16,8 @@ def mol_to_tensors(mol_or_smi, settings, training, verbose=False):
         mol = chem.MolFromSmiles(mol_or_smi)
     else:
         mol = mol_or_smi
-    feat = VlbFeaturizer()
-    data = VlbData()
+    feat = G2dFeaturizer()
+    data = G2dData()
 
     if training:  
         data = mol_to_tensors_fragment(data, mol, settings, verbose=verbose)

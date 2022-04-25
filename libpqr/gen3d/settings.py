@@ -3,7 +3,7 @@ from dataclasses import dataclass, field, fields
 
 
 @dataclass
-class LexSettings:
+class G3dSettings:
     data_skiplist: str="./data/complexes_skiplist.json"
     data_complexes: str="./data/complexes_paths_pdb.json"
     data_shuffle: bool=True
@@ -48,7 +48,7 @@ class LexSettings:
             
 
 def get_default_settings():
-    settings = LexSettings()
+    settings = G3dSettings()
     return settings
 
 

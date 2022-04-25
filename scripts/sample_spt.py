@@ -11,26 +11,21 @@ import benchml as bml
 log = bml.log
 
 from libpqr.aux import Timer
-from libpqr.gen2d import load_baseline
 from libpqr.gen3d import (
     build_collater,
     complex_to_tensors,
     data_to_torch,
-    LexBaseline,
+    G3d,
+    load_model_pqr
 )
 
 
 def run(args):
-    model = torch.load(args.model, map_location=args.device)
-    model.settings.perturb_pos = False # TODO as .eval()
-    for k, v in model.settings.items():
+    model = load_model_pqr(args.model, args.baseline, args.vocabulary, args.device)
+    model = model.eval()
+    for k, v in model.g3d.settings.items():
         log << log.mb << "Settings: %-20s = %s" % (k, str(v)) << log.endl
-    baseline_2d = load_baseline(
-        model_arch=args.baseline, 
-        motifs_json=args.vocabulary,
-        device=args.device
-    )
-    baseline_3d = LexBaseline(model, baseline_2d, args.device)
+
     cmplx_data = json.load(open(args.complexes))
     for cmplx in cmplx_data:
         log << log.my << "Complex:" \
@@ -38,9 +33,7 @@ def run(args):
             << os.path.basename(cmplx["mol_sdf"]) \
             << log.endl
         output = single_point_sample(
-            baseline_2d,
-            baseline_3d,
-            settings=model.settings,
+            model,
             args=args,
             cmplx=cmplx
         )
@@ -49,14 +42,12 @@ def run(args):
 
 @torch.no_grad()
 def single_point_sample(
-        baseline_2d,
-        baseline_3d,
-        settings,
+        model,
         args,
         cmplx,
         pq_highpass=100
 ):
-    data = complex_to_tensors(cmplx, settings=settings)
+    data = complex_to_tensors(cmplx, settings=model.g3d.settings)
     data = data_to_torch(data)
     collate = build_collater()
     data_complex = collate([data])
@@ -66,7 +57,7 @@ def single_point_sample(
         data_complex = data_complex.to(args.device)
 
     with T("ba"):
-        xa_lig, xb_lig = baseline_2d.model.linker_model(
+        xa_lig, xb_lig = model.g2d.g2d.linker_model(
             data_complex.lig_x,
             data_complex.lig_edge_index,
             data_complex.lig_edge_attr,
@@ -74,20 +65,20 @@ def single_point_sample(
         )
         xa_lig = xa_lig[data_complex.lig_center_index]
         xb_lig = xb_lig[data_complex.lig_center_index]
-        z = 1.*torch.ones_like(baseline_2d.weights) / baseline_2d.weights.shape[0]
-        p = baseline_2d.weights
-        q = baseline_2d.project(xa_lig, xb_lig)
+        z = 1.*torch.ones_like(model.g2d.g1d.weights) / model.g2d.g1d.weights.shape[0]
+        p = model.g2d.g1d.weights
+        q = model.g2d.project(xa_lig, xb_lig)
         q = torch.clamp(q, 0., 0.9999)
         q_agg = q/(1-q)
 
     with T("fw"):
-        x_complex = baseline_3d.model.forward_complex(data_complex, args.device)
-        r = baseline_3d.project(x_complex)
+        x_complex = model.g3d.forward_complex(data_complex, args.device)
+        r = model.project(x_complex)
         r = torch.clamp(r, 0., 0.9999)
         r_agg = r/(1-r)
 
     # Likelihood factors
-    p_agg = baseline_2d.weights.cpu().numpy()
+    p_agg = model.g2d.g1d.weights.cpu().numpy()
     q_agg = q_agg.cpu().numpy().flatten()
     r_agg = r_agg.cpu().numpy().flatten()
     pq_agg = q_agg * p_agg
@@ -102,7 +93,7 @@ def single_point_sample(
     r_top_n = r_eff[top_n]
     motifs_top_n = []
     for i,r in zip(top_n, r_top_n):
-        id = baseline_2d.motifs[i]["smi"]+"_"+str(baseline_2d.motifs[i]["vec"])
+        id = model.g2d.g1d.motifs[i]["smi"]+"_"+str(model.g2d.g1d.motifs[i]["vec"])
         motifs_top_n.append([ id, pq_agg[i], pqr_agg[i], r ])
     motifs_top_n = list(sorted(motifs_top_n, key=lambda m: -m[3]))
     print("Ranking (with pq high-pass filter)")

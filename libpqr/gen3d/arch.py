@@ -24,12 +24,12 @@ from ..aux import tensor_info, Timer
 from ..common import Featurizer
 
 
-class LexFeaturizer(Featurizer):
+class G3dFeaturizer(Featurizer):
     def __init__(self):
         Featurizer.__init__(self, connect_full=False, ignore_missing=True)
 
 
-class LexData(Data):
+class G3dData(Data):
     def __inc__(self, key, value, *args, **kwargs):
         if key == "center_index":
             return self.x.shape[0]
@@ -151,7 +151,7 @@ def featurize_hyperedges(
         return hyperedge_attr_out, wijk
 
 
-class LexComponents(torch.nn.Module):
+class G3dComponents(torch.nn.Module):
     def __init__(self, 
             feat,
             settings,

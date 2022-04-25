@@ -4,6 +4,7 @@ from ..aux import normalize_atom_index
 from .aux import clear_stars
 from .fragment import fragment_mol
 from .rebuild import rebuild_mol, rebuild_mol_stages_given_order
+from .model import G1d, load_model_p
 
 
 def motifs_from_smiles(

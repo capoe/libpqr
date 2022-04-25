@@ -15,7 +15,7 @@ from torch_geometric.nn.inits import glorot, zeros
 from ..common import Featurizer
 
 
-class VlbData(Data):
+class G2dData(Data):
     def __inc__(self, key, value, *args, **kwargs):
         if key == "pair_link_index":
             return self.x.shape[0]
@@ -30,12 +30,12 @@ class VlbData(Data):
             return super().__cat_dim__(key, value, *args, **kwargs)
 
 
-class VlbFeaturizer(Featurizer):
+class G2dFeaturizer(Featurizer):
     def __init__(self):
         super().__init__(connect_full=False, ignore_missing=True)
 
 
-class VlbComponents(torch.nn.Module):
+class G2dComponents(torch.nn.Module):
     def __init__(self, feat):
         super().__init__()
         self.vector_model = VectorModel(feat.dimNode(), feat.dimEdge())

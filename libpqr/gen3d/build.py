@@ -12,12 +12,12 @@ from torch_geometric.loader.dataloader import Collater
 
 from ..aux import Timer
 from ..data import DatasetPartition
-from .arch import LexFeaturizer, LexComponents
+from .arch import G3dFeaturizer, G3dComponents
 from .aux import complex_to_tensors, data_to_torch
 
 
 def build_featurizer():
-    return LexFeaturizer()
+    return G3dFeaturizer()
 
 
 def build_collater():
@@ -26,7 +26,7 @@ def build_collater():
 
 def build_model(settings, device):
      feat = build_featurizer()
-     lex_module = LexComponents(
+     lex_module = G3dComponents(
             feat=feat,
             settings=settings
          ).to(device)
@@ -46,10 +46,10 @@ def build_opt(model, lr=10**-4):
 
 
 def build_sampler(*args, **kwargs):
-    return LexPreprocessor(*args, **kwargs)
+    return G3dPreprocessor(*args, **kwargs)
 
 
-class LexPreprocessor:
+class G3dPreprocessor:
     def __init__(self, 
             settings
     ):

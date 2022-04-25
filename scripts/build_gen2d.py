@@ -20,12 +20,16 @@ from libpqr.aux import (
     Checkpointer, 
     Timer
 )
+
+from libpqr.gen1d import (
+    load_model_p
+)
+
 from libpqr.gen2d import (
     get_default_settings, 
     collate,
     mol_to_tensors,
     data_to_torch,
-    load_baseline,
     build_sampler, 
     build_model, 
     build_opt,
@@ -35,7 +39,7 @@ from libpqr.gen2d import (
 
 def train(args):
     settings = get_default_settings()
-    settings.baseline = load_baseline(None, args.vocabulary, None)
+    settings.baseline = load_model_p(args.vocabulary, args.device)
     if args.input == "":
         if args.recalibrate:
             raise ValueError("Missing 'input' for recalibration")
@@ -132,6 +136,7 @@ def step_linker(model, opt, data, args, settings):
 
     # Baseline
     if args.baseline == "explicit":
+        #data_base = settings.baseline.sample(yij.shape[0], "1d")
         data_base = sample_baseline(yij.shape[0], args, settings)
         xa_base, xb_base = model.linker_model(
             data_base.x,
@@ -181,7 +186,7 @@ def mol_to_tensors_baseline(m, settings):
 
 
 def sample_baseline(n, args, settings):
-    motifs = settings.baseline.sample(n)
+    motifs, probs = settings.baseline.sample(n, "1d")
     func = functools.partial(mol_to_tensors_baseline, settings=settings)
     datalist = list(map(func, motifs)) # TODO Multiprocessing?
     datalist = [ data_to_torch(_) for _ in datalist ]

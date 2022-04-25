@@ -8,10 +8,9 @@ from .aux import (
     data_to_torch
 )
 
-from .baseline import (
-    Baseline,
-    load_baseline,
-    sample_baseline,
+from .model import (
+    G2d,
+    load_model_pq,
     score_baseline
 )
 
@@ -21,3 +20,4 @@ from .build import (
     build_model, 
     build_opt
 )
+

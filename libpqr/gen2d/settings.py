@@ -4,7 +4,7 @@ from dataclasses import dataclass, fields
 
 
 @dataclass
-class VlbSettings:
+class G2dSettings:
     pretrain: bool=False
     training: bool=True
     rebuild_order: str="breadth_and_depth"
@@ -19,5 +19,5 @@ class VlbSettings:
             
 
 def get_default_settings():
-    return VlbSettings()
+    return G2dSettings()
 
