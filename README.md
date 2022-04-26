@@ -32,4 +32,19 @@ pip install .
 
 ## Getting started
 
-The workflow is described [here](./workflow). The instructions will guide you through the individual training steps. Note that, to build performant models, you will first need to download the complete datasets.
+The workflow is described [here](./workflow). The instructions will guide you through the individual training steps. Note that, to build performant models, you will first need to download and preprocess the complete datasets.
+
+
+## Citation
+A description of the framework is available on arXiv -- please cite this if you find the method and/or code useful:
+```
+@article{chan_3d_2022,
+  doi = {10.48550/ARXIV.2204.10663},
+  url = {https://arxiv.org/abs/2204.10663},
+  author = {Chan, Lucian and Kumar, Rajendra and Verdonk, Marcel and Poelking, Carl},
+  keywords = {Machine Learning (stat.ML), Machine Learning (cs.LG), Biomolecules (q-bio.BM)},
+  title = {3D pride without 2D prejudice: Bias-controlled multi-level generative models for structure-based ligand design},
+  publisher = {arXiv},
+  year = {2022}
+}
+```
