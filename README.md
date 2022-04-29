@@ -2,10 +2,10 @@
     <img src="docs/pqr.png" width="450px">
 </div>
 
+## Overview
+
 [![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)
 [![arXiv shield](https://img.shields.io/badge/arXiv-2204.10663-red.svg?style=flat)](https://arxiv.org/abs/2204.10663)
-
-## Overview
 
 - [Installation](#installation)
 - [Getting started](#getting-started)
