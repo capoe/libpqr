@@ -10,6 +10,12 @@ This particular implementation uses stochastic reconstructions during model trai
 
 ## Installation
 
+### System requirements
+
+The code has been tested on 64-bit Linux only. GPU support is essential for model training, with a recommended GPU RAM of at least 16GB. 
+
+### Installation through conda/pip
+
 1. Set up a new python3 conda environment
 2. Install [pytorch](https://pytorch.org)
 3. Install [pytorch-geometric](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
@@ -28,6 +34,17 @@ pip3 install benchml
 git clone https://github.com/capoe/libpqr.git
 cd libpqr
 pip install .
+```
+
+The pretrained models provided in the ./models directory have been obtained with the following configuration:
+```
+torch==1.8.2+cu102
+torch-cluster==1.6.0
+torch-geometric==2.0.4
+torch-scatter==2.0.9
+torch-sparse==0.6.12
+rdkit-pypi==2021.9.5.1
+libpqr==0.1.0
 ```
 
 ## Getting started
