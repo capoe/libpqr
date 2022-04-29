@@ -2,6 +2,7 @@
 
 Note that the [../data](../data) directory contains only a small data sample. With the commands below, you can thus verify the successful setup of the python environment and sound code execution. To train performant models, you will first need to download the complete datasets (see [these](../data/README.md) instructions).
 
+Make sure to extract the tar-files in the data directory before executing these commands. With the data samples (as opposed to full datasets) provided here, the scripts below should finish in ca. 10min, subject to hardware variations. The output files that are generated should resemble those provided in the [models](../models) directory of this repository.
 
 ### 1. Construct the pseudo-generative 1D model (G<sub>p</sub>)
 ```bash
