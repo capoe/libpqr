@@ -2,7 +2,14 @@
     <img src="docs/pqr.png" width="450px">
 </div>
 
-# 
+[![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)
+[![arXiv shield](https://img.shields.io/badge/arXiv-1709.01233-red.svg?style=flat)](https://arxiv.org/abs/2204.10663)
+
+## Overview
+
+- [Installation](#installation)
+- [Getting started](#getting-started)
+- [Citation](#citation)
 
 This package implements the *PQR* framework -- a generative approach to structure-based ligand elaboration. The framework consists of a multi-level contrastive learning protocol that constructs a generative posterior as a product of context factors, representing 1D, 2D and 3D context information. A description of the method can be found [here](https://arxiv.org/abs/2204.10663).
 
