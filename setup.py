@@ -37,9 +37,7 @@ def make_cxx_extensions():
 
 if __name__ == "__main__":
     setup(
-        name="libpqr",
         setup_requires=['pybind11>=2.4'],
         install_requires=['pybind11>=2.4'],
-        packages=['libpqr'],
         ext_modules=make_cxx_extensions()
     )
